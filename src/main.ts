@@ -18,6 +18,7 @@ const camera = new THREE.PerspectiveCamera(
 const renderer = new THREE.WebGLRenderer({
   //@ts-ignore
   canvas: document.querySelector("#bg"),
+  powerPreference: "high-performance",
 });
 
 renderer.setPixelRatio(window.devicePixelRatio);
@@ -30,10 +31,10 @@ scene.add(ambientLight);
 
 // TODO - remove once complete
 // Helpers
-const gridHelper = new THREE.GridHelper(200, 50);
-scene.add(gridHelper);
-const AxesHelper = new THREE.AxesHelper(500);
-scene.add(AxesHelper);
+// const gridHelper = new THREE.GridHelper(200, 50);
+// scene.add(gridHelper);
+// const AxesHelper = new THREE.AxesHelper(500);
+// scene.add(AxesHelper);
 
 const controls = new OrbitControls(camera, renderer.domElement);
 
